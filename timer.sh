@@ -14,6 +14,7 @@ ten_min="$MUSIC_DIR/10min.wav"
 # 音声ファイルを再生する関数
 play_sound() {
     aplay "$1"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Played $1" >> "$LOG_FILE"
 }
 
 # 現在の時間を取得
